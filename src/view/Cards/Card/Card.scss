@@ -1,11 +1,11 @@
 .comp-card{
   padding: 24px;
   background-color: $purple;
-  border-radius: 16px;
+  @include generateAttrBasedOnSize($border-radius-prefix, $border-radius, 1);
   margin-bottom: 16px;
   background-image: url('/card-background-shape.svg');
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: top right; 
   height: 184px;
   width: 311px;
  
@@ -20,13 +20,13 @@
     }
     .info{
       h5{
-        color: $grey-50;
-        font-size: 10px;
+        color: $grey-50; 
+        @include generateAttrBasedOnSize($font-size-prefix, $font-sizes, 2);
         margin: 0 0 8px 0
       }
       span{
         color: $white;
-        font-size: 14px;
+        @include generateAttrBasedOnSize($font-size-prefix, $font-sizes, 2);
         font-weight: bold;
         display: block;
       }
@@ -37,12 +37,12 @@
     .card-name{
       color: $white;
       font-weight: bold;
-      font-size: 14px;
+      @include generateAttrBasedOnSize($font-size-prefix, $font-sizes, 2);
     }
     .card-number{
       color: $grey-50;
       font-weight: bold;
-      font-size: 14px;
+      @include generateAttrBasedOnSize($font-size-prefix, $font-sizes, 2);
     }
   }
   .comp-button.toggle-modal{

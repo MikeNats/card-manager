@@ -1,33 +1,38 @@
 
 @font-face {
-    font-family: 'lineto-circular-pro-book';
-      src: url('/lineto-circular-pro-book.woff2') format('woff2'), /* Super Modern Browsers */
-          url('/lineto-circular-pro-book.woff') format('woff'), /* Pretty Modern Browsers */
-          url('/lineto-circular-pro-book.ttf')  format('truetype');/* Safari, Android, iOS */
-  }
-
+  font-family: 'lineto-circular-pro-book';
+  src: url('/lineto-circular-pro-book.woff2') format('woff2'),
+    url('/lineto-circular-pro-book.woff') format('woff'),
+    url('/lineto-circular-pro-book.ttf')  format('truetype');
+}
+$unit:'px'; 
 $purple-60: #4C00C2;
 $purple-90: #32007E;
 $purple: #3B058E;
 $background: #E5E5E5;
-$white: #FFFFFF;
+$white: #FFFFFF; 
 $grey-20: #D3D8E1;
 $grey-50: #798291;
 $grey-70: #444E5D;
 $grey-90: #1A212C;
 $green-30: #19AC51;
-$red-30: #FC484C;
-
-
+$red-30: #FC484C; 
 
 $spacing:  4, 8, 16, 24, 32, 40, 48, 56;
-$font-size: 0 14 16 24 30;
+$font-sizes: 0 14 16 24 30;
 $border-radius: 16, 24, 100;
+$font-size-prefix: 'font-size';
+$border-radius-prefix: 'border-radius';
+$padding-right-prefix: 'padding-right';
+$padding-left-prefix: 'padding-left';
+$padding-top-prefix: 'padding-top';
+$padding-bottom-prefix: 'padding-bottom';
+$margin-right-prefix: 'margin-right';
+$margin-left-prefix: 'margin-left';
+$margin-top-prefix: 'margin-top';
+$margin-bottom-prefix: 'margin-bottom';
 
-$unit: 'px';
-$prefix: 'cas';
-$padding:'padding'; 
-$font: 'font-size';
 
-@include  generateRulesBasedOnSizes($prefix, $padding, $spacing, $unit);
-@include  generateRuleBasedOnSizes($prefix, $font, $font-size, $unit);
+
+
+
