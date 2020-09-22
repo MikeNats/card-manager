@@ -1,49 +1,9 @@
-@function map-extend($map, $maps) {
-  @each $key, $value in $maps {
-    $map: map-merge($map, ($key: $value));
-  }
-  @return $map;
+@mixin generateAttrBasedOnSize($rule, $sizes, $index) {
+    #{$rule}: #{nth($sizes, $index)}#{'px'}
 }
   
-@mixin theming($themes, $attrs) {
-  @each $theme, $map in $themes {
-    .#{$theme} & {
-      @each $key, $value in $attrs {
-        #{$key}: map-get($map, $value);
-      }
-    }
-  }
-}
-
-@mixin mediaQuerySmall($attrs) {
-   @each $key, $value in $attrs {
-        @media  (max-width: $media-query-small) {
-          #{$key}:$value;
-        }
-    }
-}  
-
- 
-@mixin generateRulesBasedOnSizes($prefix, $property, $sizes, $unit) {
-  @for $i from 1 through length($sizes) {
-    $size: nth($sizes, $i);
-    .#{$prefix}-#{$property}-#{$i - 1} {
-      #{$property}: #{$size}#{$unit} #{$size}#{$unit} #{$size}#{$unit} #{$size}#{$unit};
-    }
-  }
-}
-
-@mixin generateRuleBasedOnSizes($prefix, $property, $sizes, $unit) {
-  @for $i from 1 through length($sizes) {
-    $size: nth($sizes, $i);
-    .#{$prefix}-#{$property}-#{$i - 1} {
-      #{$property}: #{$size}#{$unit};
-    }
-  }
-}
   
 @mixin background-opacity($color, $opacity: 0.3) {
   background: $color;
   background: rgba($color, $opacity);
 }
-  

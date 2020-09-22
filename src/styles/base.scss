@@ -1,31 +1,27 @@
 * {
   box-sizing: border-box;
 }
-
 body {
   font-family: 'lineto-circular-pro-book', 'Helvetica Neue',
     sans-serif;
     margin: 0;
-}
+    .app{
+      @include generateAttrBasedOnSize($padding-right-prefix, $spacing, 5);
+      @include generateAttrBasedOnSize($padding-top-prefix, $spacing, 5);
+      @include generateAttrBasedOnSize($padding-left-prefix, $spacing, 5);
+    }
 
-ul,li{
-  display: block; 
-  margin:0;
-  padding: 0; 
-}
-.hide{
-  height: 0;
-  z-index: -1; 
-}
-.show{
-
-}
-
-fieldset{
-  outline: transparent;
-  border: none;
-  margin: 0 0 50px 0;
-  padding: 0;
-  display: flex;
+  ul,li{
+    display: block; 
+    margin:0;
+    padding: 0; 
+  }
+  .hide{
+    height: 0;
+    z-index: -1; 
+  }
+  .show{
+    display: block!important;
+  }
 }
 
