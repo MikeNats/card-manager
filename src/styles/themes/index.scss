@@ -1,0 +1,4 @@
+@import 'dark';
+@import 'light';
+
+$themes: map-extend($dark, $light);                              
