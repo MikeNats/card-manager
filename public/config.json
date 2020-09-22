@@ -1,0 +1,4 @@
+{
+  "TRANSACTIONS_API_URI": "/mock/transactions",
+  "AUTH_API_URI": "/mock/auth"
+}

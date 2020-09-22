@@ -1,0 +1,15 @@
+[{
+  "id": 23423423,
+  "type": "mastercard",
+  "name": "Jhon Doe",
+  "cardNumber": 5500000000000004,
+  "expiration": "08/22",
+  "cvc": 333
+},{
+  "id": 234232323,
+  "type": "visa", 
+  "name": "Jane Doe",
+  "cardNumber": 4111111111111111,
+  "expiration": "09/23",
+  "cvc": 345
+}] 
