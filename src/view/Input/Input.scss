@@ -1,0 +1,27 @@
+$comp-input:(
+    border-color: secondaryBackgroundColor
+);
+$comp-input-focus:(
+    border-color: mainBackgroundColor
+);
+$comp-input-error:(
+    border-color: errorBorderColor
+);
+$comp-input-small:(
+    width: 100% 
+);
+
+.comp-input{
+  border-style: solid;
+  border-width: 1px;
+  @include theming($themes, $comp-input);
+  @include mediaQuerySmall($comp-input-small);
+
+  &:focus{
+    @include theming($themes, $comp-input-focus);
+    outline: none; 
+  }
+  &.error{ 
+    @include theming($themes, $comp-input-error);
+  }
+}
