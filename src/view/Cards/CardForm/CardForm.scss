@@ -1,0 +1,70 @@
+.comp-card-form{
+    margin-top: 15px;
+    .comp-card{
+        margin-bottom: 35px;
+    }
+    fieldset{
+        position: relative;
+    }
+    label{
+        font-weight: bold;
+        font-size: 14px;
+        color: #000;
+        margin-bottom: 14px;
+    }
+    input{
+        font-size: 14px;
+        color: #000;
+        width:100%;
+        border: none;
+        border-bottom: 1px solid $grey-20;
+        padding-bottom: 10px;
+        outline: none;
+    }
+    ::placeholder { 
+        color: grey-20;
+      } 
+    input {
+        background-position: 100% 0%;
+        background-repeat: no-repeat;
+    }
+    input.error{
+        background-image: url('/form-error.svg');
+    }
+    .valid input{
+        background-image: url('/form-success.svg');
+        border-color: $green-30;
+        color: $green-30;  
+    }
+    input.error, .errorMessage{
+        color: $red-30;
+        border-color: $red-30;
+
+    }
+    .errorMessage{
+        margin:0;
+        font-size: 14px;
+        position: absolute;
+        bottom: -12px;    
+    }
+    .errorMessage.hide{
+        display: none;
+    }
+    button:disabled {
+        background-color: $grey-20;
+    }
+    button{
+        margin: 0 auto 48px auto;
+    }
+    button:focus{
+        outline: none;
+    }
+    #delete-card-button{
+        background: none;
+        color: $grey-20;
+        padding:0;
+        &:hover{
+            color: #000;
+        }
+    }
+}
